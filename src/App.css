@@ -1,0 +1,148 @@
+.inventory-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+.inventory-main {
+  color: #172b4d;
+  scroll-behavior: smooth;
+}
+
+.inventory-sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background: #0f2948;
+  color: #ffffff;
+  padding: 1.2rem 1rem;
+  border-right: 1px solid #112f51;
+}
+
+.sidebar-title {
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.inventory-sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.inventory-sidebar a {
+  color: #d6e2f0;
+  display: block;
+  text-decoration: none;
+  padding: 0.45rem 0.55rem;
+  border-radius: 8px;
+}
+
+.inventory-sidebar a:hover {
+  background: rgba(255, 255, 255, 0.13);
+  color: #ffffff;
+}
+
+.inventory-sidebar a.active-link {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.inventory-section {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.04);
+}
+
+.section-head {
+  margin-bottom: 0.8rem;
+}
+
+.section-head h2 {
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.permission-note {
+  color: #8a6d3b;
+  margin: 0.8rem 0 0;
+  font-size: 0.9rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+}
+
+.metric-card {
+  background: linear-gradient(180deg, #f8fbff, #f3f6fb);
+  border: 1px solid #d9e2ef;
+  border-radius: 10px;
+  padding: 0.9rem;
+}
+
+.metric-label {
+  margin: 0;
+  color: #4f5d75;
+  font-size: 0.85rem;
+}
+
+.metric-value {
+  margin: 0.2rem 0 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.detail-list {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+}
+
+.detail-list div {
+  border-bottom: 1px dashed #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.detail-list dt {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #5d6b82;
+  margin: 0;
+}
+
+.detail-list dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.subpanel h3 {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+@media (max-width: 768px) {
+  .inventory-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .inventory-sidebar {
+    position: static;
+    height: auto;
+  }
+
+  .inventory-sidebar ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .inventory-section {
+    padding: 0.8rem;
+  }
+}
